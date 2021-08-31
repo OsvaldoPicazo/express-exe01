@@ -4,6 +4,8 @@ const express = require('express');
 // Express server will be handling requests and responses
 const app = express();
 
+app.use(express.static(__dirname + '/public'))
+
 app.get('/home', (request, response)=>{
 
     response.sendFile(__dirname + '/views/home.html')
